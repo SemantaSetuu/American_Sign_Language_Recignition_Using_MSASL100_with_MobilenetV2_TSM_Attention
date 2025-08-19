@@ -16,6 +16,8 @@ On the **MS-ASL100 test set**, the final **Stage D** model achieved:
 (For reference, Stage C reached **Top-1 = 49.42%** and **Top-5 = 74.71%**.)  
 
 The system supports **real-time webcam recognition** and a **Streamlit web app** for uploaded videos. A short demo video will be included to showcase predictions in action.
+<img width="1767" height="471" alt="image" src="https://github.com/user-attachments/assets/6fa46579-cc3a-4e85-af37-dda5aec17b9c" />
+
 
 ---
 
