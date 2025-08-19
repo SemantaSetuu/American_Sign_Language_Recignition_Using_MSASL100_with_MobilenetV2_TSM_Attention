@@ -1,0 +1,12 @@
+torch
+torchvision
+opencv-python
+mediapipe
+numpy
+tqdm
+scikit-learn
+tabulate
+Pillow
+streamlit
+ffmpeg-python
+yt-dlp
