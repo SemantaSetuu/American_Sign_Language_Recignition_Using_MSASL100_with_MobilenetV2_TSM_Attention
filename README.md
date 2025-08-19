@@ -1,7 +1,7 @@
 # Word-Based American Sign Language Recognition Using 2D CNN with TSM and Attention
 
 ## 📖 Project Overview
-This project, **Word-Based American Sign Language Recognition Using 2D CNN with Temporal Shift Module and Attention**, focuses on developing an efficient deep learning pipeline for recognizing ASL signs from videos.  
+This project, **Word-Based American Sign Language Recognition Using 2D CNN MobileNet-V2 with Temporal Shift Module and Attention**, focuses on developing an efficient deep learning pipeline for recognizing ASL signs from videos.  
 
 The system is built on **MobileNetV2** as the backbone, and the trained weights are passed forward at each stage for progressive improvement:
 - **Stage A**: Baseline MobileNetV2 CNN  
