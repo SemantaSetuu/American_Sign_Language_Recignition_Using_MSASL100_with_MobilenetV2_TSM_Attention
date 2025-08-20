@@ -7,7 +7,6 @@ from tqdm import tqdm
 from torch.utils.data import Dataset, DataLoader, WeightedRandomSampler
 from torchvision.models import mobilenet_v2
 from stage_C_new import ASLSeqDataset # using same data preparation technique before inputting to the model such as, same cropping,same argumentation etc.
-
 from typing import Dict, Any
 
 CKPT_FULL = Path(r"C:\Users\seman\Desktop\clg\2nd_sem\research_practicum\code\src\cnn+tsm\checkpoint for stage D for training later\stage_d_ckpt.pth" )  # ← new, holds full training state
@@ -91,7 +90,7 @@ def main():
     val_ds = ASLSeqDataset(VAL_DIR, "val", T=NUM_FRAMES)
 
     labels = np.array([lab for _, lab in train_ds.samples])
-    weights = 1.0 / (np.bincount(labels, minlength=len(train_ds.classes)) + 1e-6)
+    weights = 1.0 / (np.bincount(labels, minlength=len(train_ds.cls)) + 1e-6)
     sampler = WeightedRandomSampler(
         torch.as_tensor(weights[labels], dtype=torch.double),
         len(labels),
@@ -107,7 +106,7 @@ def main():
         num_workers=NUM_WORKERS, pin_memory=True)
 
     # MODEL, OPTIMISER, SCHEDULER
-    model = TSM_Attn(len(train_ds.classes)).to(DEVICE)
+    model = TSM_Attn(len(train_ds.cls)).to(DEVICE)
 
     # Backbone warm-start (only if we’re NOT resuming a full ckpt)
     if not CKPT_FULL.exists():
@@ -135,7 +134,7 @@ def main():
 
     # save the class list once so inference stays aligned
     with open("stage_d_classes.txt", "w") as f:
-        f.write("\n".join(train_ds.classes))
+        f.write("\n".join(train_ds.cls))
 
 
     #(Optional) RESUME TRAINING
