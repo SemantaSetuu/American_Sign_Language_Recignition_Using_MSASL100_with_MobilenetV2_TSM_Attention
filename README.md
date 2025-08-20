@@ -1,6 +1,6 @@
 # Word-Based American Sign Language Recognition Using 2D CNN MobileNet-V2 with TSM and Attention
 
-## 📖 Project Overview
+## Project Overview
 This project, **Word-Based American Sign Language Recognition Using 2D CNN MobileNet-V2 with Temporal Shift Module and Attention**, focuses on developing an efficient deep learning pipeline for recognizing ASL signs from videos.  
 
 The system is built on **MobileNetV2** as the backbone, and the trained weights are passed forward at each stage for progressive improvement:
@@ -21,7 +21,7 @@ The system supports **real-time webcam recognition** and a **Streamlit web app**
 
 ---
 
-## ⚙️ System Requirements & Environment Setup
+## System Requirements & Environment Setup
 
 This project was developed and tested on the following system (as reported in the thesis):
 - **CPU**: 13th Gen Intel Core i7-13620H  
@@ -43,7 +43,7 @@ To ensure all scripts run on the discrete NVIDIA GPU:
 
 ---
 
-## 🐍 Python Environment & Dependencies
+## Python Environment & Dependencies
 
 This project was developed in **PyCharm** using a locally installed **Python 3.12 interpreter** (`python.exe`).  
 No virtual environment was used during development. All libraries were installed directly from the PyCharm terminal with **pip**.  
@@ -79,8 +79,10 @@ In addition to Python libraries, the following external tools are needed:
 - **Browser (optional)** → for running the Streamlit demo (`streamlit run app.py`).  
 
 ---
+## Dataset collection
+For this project, Microsoft American Sign Language (MS-ASL) data was used and downloaded from official website. link: https://www.microsoft.com/en-us/research/project/ms-asl/ . we have already downloaded it and added in this repository named as MSASL
 
-## 🚀 How to Run the Project  
+## How to Run the Project  
 
 ### 1️⃣ Dataset Preparation  
 All artifacts are created under the top-level `data/` directory by running the provided scripts in order.  
